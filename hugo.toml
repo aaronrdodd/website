@@ -3,6 +3,9 @@ languageCode = 'en-gb'
 title = 'Aaron Dodd'
 theme = 'missing-css'
 
+[permalinks]
+offline = "/offline.html"
+
 [[menus.main]]
 name = 'Aaron Dodd'
 pageRef = '/'
