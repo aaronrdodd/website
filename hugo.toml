@@ -1,0 +1,29 @@
+baseURL = 'https://aaronrdodd.com/'
+languageCode = 'en-gb'
+title = 'Aaron Dodd'
+theme = 'missing-css'
+
+[[menus.main]]
+name = 'Aaron Dodd'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/blog'
+weight = 20
+
+[[menus.main]]
+name = 'Fun'
+pageRef = '/fun'
+weight = '30'
+
+[[menus.main]]
+name = "Work"
+pageRef = "/work"
+weight = 40
+
+[[menus.main]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 60

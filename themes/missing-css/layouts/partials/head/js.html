@@ -1,0 +1,18 @@
+{{- with resources.Get "js/main.js" }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- include Missing.CSS JS modules -->
+<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/tabs.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/menu.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/feed.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/overflow-nav.js" crossorigin="anonymous"></script>
