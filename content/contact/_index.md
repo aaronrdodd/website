@@ -9,7 +9,6 @@ draft = false
 I don't post often but you can find me on social media here
 
 - [BlueSky](https://magicmissile1.bsky.social)
-- [FaceBook](https://www.facebook.com/aaron.dodd.5070)
 - [GitHub](https://github.com/aaronrdodd)
 - [LinkedIn](https://linkedin.com/in/aarondodd94)
 - [Twitter / X](https://x.com/MagicMissile12)
