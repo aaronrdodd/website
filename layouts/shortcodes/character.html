@@ -1,0 +1,15 @@
+{{- $character := or (.Get "character") "" }}
+{{- $type := or (.Get "type") "" }}
+
+<div {{ with $character }}class="f-row" style="margin-top: calc(var(--gap) + 1px) "{{ end }}>
+    {{- with $character }}
+    <div class="h-16 w-16" style="flex-shrink: 0; padding-top: 5px;">
+        <img src="/{{ . }}.png" />
+    </div>
+    {{- end }}
+    {{- if .Inner }}
+    <p class="{{ $type }} color">
+        {{ .Inner | .Page.RenderString -}}
+    </p>
+    {{- end }}
+</div>
