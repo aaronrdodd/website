@@ -12,7 +12,18 @@
 {{- end }}
 
 <!-- include Missing.CSS JS modules -->
-<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/tabs.js" crossorigin="anonymous"></script>
-<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/menu.js" crossorigin="anonymous"></script>
-<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/feed.js" crossorigin="anonymous"></script>
-<script type="module" src="https://unpkg.com/missing.css@1.1.3/dist/js/overflow-nav.js" crossorigin="anonymous"></script>
+{{- with "https://unpkg.com/missing.css@1.1.3/dist/js/tabs.js" }}
+<script type="module" src="{{ . }}" integrity="{{- with resources.GetRemote . | fingerprint }}{{- .Data.Integrity }}{{ end }}" crossorigin="anonymous"></script>
+{{- end }}
+
+{{- with "https://unpkg.com/missing.css@1.1.3/dist/js/menu.js" }}
+<script type="module" src="{{ . }}" integrity="{{- with resources.GetRemote . | fingerprint }}{{- .Data.Integrity }}{{ end }}" crossorigin="anonymous"></script>
+{{- end }}
+
+{{- with "https://unpkg.com/missing.css@1.1.3/dist/js/feed.js" }}
+<script type="module" src="{{ . }}" integrity="{{- with resources.GetRemote . | fingerprint }}{{- .Data.Integrity }}{{ end }}" crossorigin="anonymous"></script>
+{{- end }}
+
+{{- with "https://unpkg.com/missing.css@1.1.3/dist/js/overflow-nav.js" }}
+<script type="module" src="{{ . }}" integrity="{{- with resources.GetRemote . | fingerprint }}{{- .Data.Integrity }}{{ end }}" crossorigin="anonymous"></script>
+{{- end }}
