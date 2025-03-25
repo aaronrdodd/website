@@ -8,8 +8,8 @@ Considering the trials and tribulations I went through configuring my [github pa
 I was expecting the move to [cloudflare pages](https://pages.cloudflare.com/) to be equally difficult and time-consuming.
 However, I'm happy to report that this was actually a very simple switch over for me. 
 
-As this new site is a rewrite from scratch of my [previous site](https://aaronrdodd.github.io/github-pages-website), I took the liberty to
-change the tech stack as well as the deployment platform and infrastructure.
+As this new site is a rewrite from scratch of my [previous site](https://aaronrdodd.github.io/github-pages-website), I
+took the liberty to change the tech stack as well as the deployment platform and infrastructure.
 
 ## The code
 
@@ -36,3 +36,18 @@ To host on cloudflare pages I needed to:
 
 All of this was very streamlined by the magical cloudflare wizard. I noticed that by default cloudflare DNS points to your apex domain rather
 than `www`, so I spent some additional time configuring a redirect rule to route from `www.mydomain` to `mydomain`.
+
+## Sticking points
+
+After I had confirmed that the cloudflare pages site was up and running, I wanted to archive my old repo and rename the new cloudflare repo
+to `website`. This was possible to do in github quite easily but I had to deregister the integration and then reenable it in cloudflare, which
+meant:
+
+1. Deleting the Github integration
+2. Attempting to create a new pages site until the Github integration
+3. Linking the integration
+4. Backing out of the create new pages wizard
+5. The cloudflare pages was now pointed to the correct and renamed github repo.
+
+This was an annoying pain point, I could have left it as is but I wanted the repo name on the cloudflare dashboard to represent the actual name
+of the repo.
