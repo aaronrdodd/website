@@ -8,7 +8,7 @@ Considering the trials and tribulations I went through configuring my [github pa
 I was expecting the move to [cloudflare pages](https://pages.cloudflare.com/) to be equally difficult and time-consuming.
 However, I'm happy to report that this was actually a very simple switch over for me. 
 
-As this new site is a rewrite from scratch of my [previous site](https://aaronrdodd.github.io/website), I took the liberty to
+As this new site is a rewrite from scratch of my [previous site](https://aaronrdodd.github.io/github-pages-website), I took the liberty to
 change the tech stack as well as the deployment platform and infrastructure.
 
 ## The code
