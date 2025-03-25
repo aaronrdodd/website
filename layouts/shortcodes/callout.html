@@ -5,7 +5,7 @@
 <div class="box {{ $type }}">
     {{- with $title }}
     <div>
-        <strong class="block titlebar">{{ . }}</strong>
+        <strong class="block titlebar">{{ . | .Page.RenderString }}</strong>
     </div>
     {{- end }}
 
