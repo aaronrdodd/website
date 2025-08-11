@@ -1,6 +1,6 @@
 +++
 title = 'Migrating from Github Pages to Cloudflare'
-date = 2024-03-25
+date = 2025-03-25
 draft = false
 +++
 
